@@ -1,66 +1,5 @@
 {
-  "Changes": [
-    {
-      "LogName": "Objects Less Fair Bear",
-      "Action": "EditData",
-      "Target": "Data/Objects",
-      "Fields": {
-        "MadDog.HashtagBearFam_StoneBrambleBerry": {
-          "Edibility": "{{StoneBrambleBerryEdibility}}"
-        },
-        "MadDog.HashtagBearFam_PumpkinJoja": {
-          "Price": "{{CustomColaSellValue}}"
-        },
-        "MadDog.HashtagBearFam_PeachJoja": {
-          "Price": "{{CustomColaSellValue}}"
-        },
-        "MadDog.HashtagBearFam_GunnarFirstPotion": {
-          "Price": "{{BasicPotionSellValue}}"
-        },
-        "MadDog.HashtagBearFam_GunnarSecondPotion": {
-          "Price": "{{BasicPotionSellValue}}"
-        },
-        "MadDog.HashtagBearFam_GunnarThirdPotion": {
-          "Price": "{{BasicPotionSellValue}}"
-        },
-        "MadDog.HashtagBearFam_GunnarRemedyAll": {
-          "Price": "{{BasicPotionSellValue}}"
-        },
-        "MadDog.HashtagBearFam_GunnarWeirdPotion": {
-          "Price": "{{BasicPotionSellValue}}"
-        },
-        "MadDog.HashtagBearFam_GunnarBadPotion": {
-          "Price": "1"
-        },
-        "MadDog.HashtagBearFam_GunnarMysteryPotion": {
-          "Price": "{{BasicPotionSellValue}}"
-        },
-        "MadDog.HashtagBearFam_GunnarPerfectPotion": {
-          "Price": "{{BasicPotionSellValue}}"
-        },
-        "MadDog.HashtagBearFam_BrazierSecretAlfredo": {
-          "Price": "{{BrazierSecretAlfredoSellValue}}"
-        },
-        "MadDog.HashtagBearFam_SondraAutumnCookie": {
-          "Price": "{{AutumnCookieSellValue}}"
-        },
-        "MadDog.HashtagBearFam_SondraSpringtimeShortbread": {
-          "Price": "{{SpringtimeShortbreadSellValue}}"
-        },
-        "MadDog.HashtagBearFam_SondraSummerCake": {
-          "Price": "{{SummerCakeSellValue}}"
-        },
-        "MadDog.HashtagBearFam_SondraWinterBar": {
-          "Price": "{{WinterBarSellValue}}"
-        },
-        "MadDog.HashtagBearFam_TriangleGrilledCheese": {
-          "Price": "{{TriangleGrilledCheeseSellValue}}"
-        },
-        "MadDog.HashtagBearFam_FerskenPeach_Honey": {
-          "Price": "{{FerskenPeachHoneySellValue}}"
-        }
-      }
-    },
+  "Changes": [,
     {
       "LogName": "Lucky Seven Remedy All",
       "Action": "EditData",
@@ -69,7 +8,7 @@
       "When": {
         "LuckierRemedyAll": true
       },
-      "Entries": {
+      "Fields": {
         "CustomAttributes": {
           "FarmingLevel": 0.0,
           "FishingLevel": 0.0,
@@ -82,6 +21,91 @@
           "Defense": 0.0,
           "Attack": 0.0
         }
+      }
+    },
+    {
+      "LogName": "Objects Less Fair Bear",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Fields": {
+        "MadDog.HashtagBearFam_StoneBrambleBerry": {
+          "Edibility": "{{StoneBrambleBerryEdibility}}"
+        },
+        //joja cola
+        "MadDog.HashtagBearFam_PumpkinJoja": {
+          "Price": "{{CustomColaSellValue}}"
+        },
+        "MadDog.HashtagBearFam_PeachJoja": {
+          "Price": "{{CustomColaSellValue}}"
+        },
+        //seeds
+        "MadDog.HashtagBearFam_StoneBrambleSeed": {
+          "Price": "{{StoneBrambleBerrySeedSellValue}}"
+        },
+        //budget potions
+        "MadDog.HashtagBearFam_GunnarFirstPotion": {
+          "Price": "{{FirstPotionSellValue}}",
+        },
+        "MadDog.HashtagBearFam_GunnarSecondPotion": {
+          "Price": "{{SecondPotionSellValue}}",
+        },
+        "MadDog.HashtagBearFam_GunnarThirdPotion": {
+          "Price": "{{ThirdPotionSellValue}}",
+        },
+        "MadDog.HashtagBearFam_GunnarRemedyAll": {
+          "Price": "{{RemedyAllPotionSellValue}}",
+        },
+        "MadDog.HashtagBearFam_GunnarWeirdPotion": {
+          "Price": "{{WeirdPotionSellValue}}",
+        },
+        "MadDog.HashtagBearFam_GunnarBadPotion": {
+          "Price": "{{BadPotionSellValue}}",
+        },
+        "MadDog.HashtagBearFam_GunnarMysteryPotion": {
+          "Price": "{{MysteryPotionSellValue}}",
+        },
+        "MadDog.HashtagBearFam_GunnarPerfectPotion": {
+          "Price": "{{PerfectPotionSellValue}}",
+        },
+        //perfect ramen
+        "MadDog.HashtagBearFam_GunnarPerfectRamen": {
+          "Price": "{{GunnarRamenSellValue}}",
+        },
+        "MadDog.HashtagBearFam_GudrunPerfectRamen": {
+          "Price": "{{GudrunRamenSellValue}}",
+        },
+        "MadDog.HashtagBearFam_SigurdPerfectRamen": {
+          "Price": "{{SigurdRamenSellValue}}",
+        },
+        "MadDog.HashtagBearFam_SondraPerfectRamen": {
+          "Price": "{{SondraRamenSellValue}}",
+        },
+        //food items
+        "MadDog.HashtagBearFam_BrazierSecretAlfredo": {
+          "Price": "{{BrazierSecretAlfredoSellValue}}",
+        },
+        "MadDog.HashtagBearFam_SondraAutumnCookie": {
+          "Price": "{{AutumnCookieSellValue}}",
+        },
+        "MadDog.HashtagBearFam_SondraSpringtimeShortbread": {
+          "Price": "{{SpringtimeShortbreadSellValue}}",
+        },
+        "MadDog.HashtagBearFam_SondraSummerCake": {
+          "Price": "{{SummerCakeSellValue}}",
+        },
+        "MadDog.HashtagBearFam_SondraWinterBar": {
+          "Price": "{{WinterBarSellValue}}",
+        },
+        "MadDog.HashtagBearFam_TriangleGrilledCheese": {
+          "Price": "{{TriangleGrilledCheeseSellValue}}",
+        },
+        "MadDog.HashtagBearFam_FerskenPeach_Honey": {
+          "Price": "{{FerskenPeachHoneySellValue}}",
+        },
+        //fruit tree sapling
+        "MadDog.HashtagBearFam_FerskenPeachSapling": {
+          "Price": "{{FersekenPeachSaplingSellValue}}",
+        },
       }
     }
   ]

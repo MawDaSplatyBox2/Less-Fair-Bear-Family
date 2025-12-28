@@ -48,8 +48,11 @@
       "TargetField": [ "MadDog.HashtagBearFam_GunShop", "Items" ],
       "Condition": "PLAYER_HAS_SEEN_EVENT current MadDog.BearFam.16193000", //has seen Gunnar install the shop
       "Fields": {
+        //seeds and cache
         "MadDog.HashtagBearFam_StoneBrambleSeed": {
-          "Price": "{{StoneBrambleBerrySeedPrice}}"
+          "Price": "{{StoneBrambleBerrySeedSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, ]
         },
         
         "MadDog.HashtagBearFam_Adventurer_Cache": {
@@ -60,78 +63,47 @@
             }
           ]
         },
+        //remedy all special behaviour
+        "MadDog.HashtagBearfam_GunnarRemedyAll": {
+          "Price": "{{RemedyAllPotionSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{RemedyAllPotionPriceMultiplier}}" }, { "Modification": "Multiply", "Amount": "{{RemedyAllPotionPriceFactor}}" }, ]
+        },
         //budget potions
         "MadDog.HashtagBearfam_GunnarFirstPotion": {
-          "Price": "{{FirstPotionPrice}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyPotionPriceMultiplier}}"
-            }
-          ]
+          "Price": "{{FirstPotionSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_GunnarSecondPotion": {
-          "Price": "{{SecondPotionPrice}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyPotionPriceMultiplier}}"
-            }
-          ]
+          "Price": "{{SecondPotionSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_GunnarThirdPotion": {
-          "Price": "{{ThirdPotionPrice}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyPotionPriceMultiplier}}"
-            }
-          ]
-        },
-        "MadDog.HashtagBearfam_GunnarRemedyAll": {
-          "Price": "{{RemedyAllPotionPrice}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyRemedyAllPriceMultiplier}}"
-            }
-          ]
+          "Price": "{{ThirdPotionSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_GunnarWeirdPotion": {
-          "Price": "{{WeirdPotionPrice}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyPotionPriceMultiplier}}"
-            }
-          ]
+          "Price": "{{WeirdPotionSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_GunnarBadPotion": {
-          "Price": "{{BadPotionPrice}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyPotionPriceMultiplier}}"
-            }
-          ]
+          "Price": "{{BadPotionSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_GunnarMysteryPotion": {
-          "Price": "{{MysteryPotionPrice}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyPotionPriceMultiplier}}"
-            }
-          ]
+          "Price": "{{MysteryPotionSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_GunnarPerfectPotion": {
-          "Price": "{{PerfectPotionPrice}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyPotionPriceMultiplier}}"
-            }
-          ]
+          "Price": "{{PerfectPotionSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         //deluxe potions
         "MadDog.HashtagBearfam_GunnarPhoenixDown": {
@@ -215,84 +187,61 @@
           ]
         },
         //perfect ramen
-        "MadDog.HashtagBearfam_GunnarPerfectRamen.Recipe": { //Failsafe for an oversight in Bear Family v1.1.1
-          "Price": "{{GunnarRamenPrice}}"
-        },
-        "MadDog.HashtagBearfam_GunnarPerfectRamen": {
-          "Price": "{{GunnarRamenPrice}}"
+        "MadDog.HashtagBearfam_GunnarPerfectRamen.Recipe": { //Note: this id be wacky
+          "Price": "{{GunnarRamenSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_GudrunPerfectRamen": {
-          "Price": "{{GudrunRamenPrice}}"
+          "Price": "{{GudrunRamenSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_SigurdPerfectRamen": {
-          "Price": "{{SigurdRamenPrice}}"
+          "Price": "{{SigurdRamenSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_SondraPerfectRamen": {
-          "Price": "{{SondraRamenPrice}}"
+          "Price": "{{SondraRamenSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         //food items
         "MadDog.HashtagBearfam_BrazierSecretAlfredo": {
           "Price": "{{BrazierSecretAlfredoSellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyFoodPriceMultiplier}}"
-            }
-          ]
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_SondraAutumnCookie": {
           "Price": "{{AutumnCookieSellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyFoodPriceMultiplier}}"
-            }
-          ]
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_SondraSpringtimeShortbread": {
           "Price": "{{SpringtimeShortbreadSellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyFoodPriceMultiplier}}"
-            }
-          ]
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_SondraSummerCake": {
           "Price": "{{SummerCakeSellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyFoodPriceMultiplier}}"
-            }
-          ]
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_SondraWinterBar": {
           "Price": "{{WinterBarSellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyFoodPriceMultiplier}}"
-            }
-          ]
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_TriangleGrilledCheese": {
           "Price": "{{TriangleGrilledCheeseSellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyFoodPriceMultiplier}}"
-            }
-          ]
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
-        "MadDog.HashtagBearfam_Recipe_FerskenPeach_Honey": {
+        "MadDog.HashtagBearfam_Recipe_FerskenPeach_Honey": { //Note: this id be wacky
           "Price": "{{FerskenPeachHoneySellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{YearlyFoodPriceMultiplier}}"
-            }
-          ]
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         //fruit tree sapling
         "MadDog.HashtagBearfam_FerskenPeachSapling": {
