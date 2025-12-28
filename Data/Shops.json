@@ -1,0 +1,314 @@
+{
+  "Changes": [
+    // shops
+
+    //cola machine
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "MadDog.HashtagBearFam_CellarVendingMachine", "Items" ],
+      "Fields": {
+        "MadDog.HashtagBearfam_PumpkinJoja": {
+          "Price": "{{CustomColaSellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{BasementColaPriceMultiplier}}"
+            },
+            {
+              "Modification": "Multiply",
+              "Amount": 0.01
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_PeachJoja": {
+          "Price": "{{CustomColaSellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{BasementColaPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_JojaCola": {
+          "Price": "{{OriginalColaSellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{BasementColaPriceMultiplier}}"
+            }
+          ]
+        }
+      }
+    },
+    //bear necessities
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "MadDog.HashtagBearFam_GunShop", "Items" ],
+      "Condition": "PLAYER_HAS_SEEN_EVENT current MadDog.BearFam.16193000", //has seen Gunnar install the shop
+      "Fields": {
+        "MadDog.HashtagBearFam_StoneBrambleSeed": {
+          "Price": "{{StoneBrambleBerrySeedPrice}}"
+        },
+        
+        "MadDog.HashtagBearFam_Adventurer_Cache": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{CachePriceMultiplier}}"
+            }
+          ]
+        },
+        //budget potions
+        "MadDog.HashtagBearfam_GunnarFirstPotion": {
+          "Price": "{{FirstPotionPrice}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyPotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_GunnarSecondPotion": {
+          "Price": "{{SecondPotionPrice}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyPotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_GunnarThirdPotion": {
+          "Price": "{{ThirdPotionPrice}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyPotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_GunnarRemedyAll": {
+          "Price": "{{RemedyAllPotionPrice}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyRemedyAllPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_GunnarWeirdPotion": {
+          "Price": "{{WeirdPotionPrice}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyPotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_GunnarBadPotion": {
+          "Price": "{{BadPotionPrice}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyPotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_GunnarMysteryPotion": {
+          "Price": "{{MysteryPotionPrice}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyPotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_GunnarPerfectPotion": {
+          "Price": "{{PerfectPotionPrice}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyPotionPriceMultiplier}}"
+            }
+          ]
+        },
+        //deluxe potions
+        "MadDog.HashtagBearfam_GunnarPhoenixDown": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_NineHerbsCharm": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearFam_RegenPotions_GreatGospelPotion": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearFam_RegenPotions_AngelWingPotion": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearFam_RegenPotions_TidesofFatePotion": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearFam_RegenPotions_FreeEnergyPotion": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearFam_RegenPotions_FantasiaPotion": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearFam_RegenPotions_DigitalMindWavePotion": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearFam_RegenPotions_GlaiveArtsPotion": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearFam_RegenPotions_NordswainsGlowPotion": {
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{DeluxePotionPriceMultiplier}}"
+            }
+          ]
+        },
+        //perfect ramen
+        "MadDog.HashtagBearfam_GunnarPerfectRamen.Recipe": { //Failsafe for an oversight in Bear Family v1.1.1
+          "Price": "{{GunnarRamenPrice}}"
+        },
+        "MadDog.HashtagBearfam_GunnarPerfectRamen": {
+          "Price": "{{GunnarRamenPrice}}"
+        },
+        "MadDog.HashtagBearfam_GudrunPerfectRamen": {
+          "Price": "{{GudrunRamenPrice}}"
+        },
+        "MadDog.HashtagBearfam_SigurdPerfectRamen": {
+          "Price": "{{SigurdRamenPrice}}"
+        },
+        "MadDog.HashtagBearfam_SondraPerfectRamen": {
+          "Price": "{{SondraRamenPrice}}"
+        },
+        //food items
+        "MadDog.HashtagBearfam_BrazierSecretAlfredo": {
+          "Price": "{{BrazierSecretAlfredoSellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyFoodPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_SondraAutumnCookie": {
+          "Price": "{{AutumnCookieSellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyFoodPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_SondraSpringtimeShortbread": {
+          "Price": "{{SpringtimeShortbreadSellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyFoodPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_SondraSummerCake": {
+          "Price": "{{SummerCakeSellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyFoodPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_SondraWinterBar": {
+          "Price": "{{WinterBarSellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyFoodPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_TriangleGrilledCheese": {
+          "Price": "{{TriangleGrilledCheeseSellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyFoodPriceMultiplier}}"
+            }
+          ]
+        },
+        "MadDog.HashtagBearfam_Recipe_FerskenPeach_Honey": {
+          "Price": "{{FerskenPeachHoneySellValue}}",
+          "PriceModifiers": [
+            {
+              "Modification": "Multiply",
+              "Amount": "{{YearlyFoodPriceMultiplier}}"
+            }
+          ]
+        },
+        //fruit tree sapling
+        "MadDog.HashtagBearfam_FerskenPeachSapling": {
+          "Price": "{{FersekenPeachSaplingPrice}}",
+        },
+        //vanilla items
+        "MadDog.HashtagBearfam_BugSteak": {
+          "Price": "{{BugSteakPrice}}"
+        },
+        "MadDog.HashtagBearfam_Slime": {
+          "Price": "{{SlimePrice}}"
+        },
+        "MadDog.HashtagBearfam_Batwings": {
+          "Price": "{{BatWingPrice}}"
+        }
+      }
+    }
+  ]
+}
