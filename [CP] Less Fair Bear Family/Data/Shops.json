@@ -10,30 +10,15 @@
       "Fields": {
         "MadDog.HashtagBearfam_PumpkinJoja": {
           "Price": "{{CustomColaSellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{BasementColaPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{BasementColaPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearfam_PeachJoja": {
           "Price": "{{CustomColaSellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{BasementColaPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{BasementColaPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearfam_JojaCola": {
           "Price": "{{OriginalColaSellValue}}",
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{BasementColaPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{BasementColaPriceMultiplier}}" } ]
         }
       }
     },
@@ -103,84 +88,34 @@
         },
         //deluxe potions
         "MadDog.HashtagBearfam_GunnarPhoenixDown": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearfam_NineHerbsCharm": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearFam_RegenPotions_GreatGospelPotion": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearFam_RegenPotions_AngelWingPotion": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearFam_RegenPotions_TidesofFatePotion": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearFam_RegenPotions_FreeEnergyPotion": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearFam_RegenPotions_FantasiaPotion": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearFam_RegenPotions_DigitalMindWavePotion": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearFam_RegenPotions_GlaiveArtsPotion": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         "MadDog.HashtagBearFam_RegenPotions_NordswainsGlowPotion": {
-          "PriceModifiers": [
-            {
-              "Modification": "Multiply",
-              "Amount": "{{DeluxePotionPriceMultiplier}}"
-            }
-          ]
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
         //perfect ramen
         "MadDog.HashtagBearfam_GunnarPerfectRamen.Recipe": { //Note: this id be wacky
@@ -245,13 +180,19 @@
         },
         //vanilla items
         "MadDog.HashtagBearfam_BugSteak": {
-          "Price": "{{BugSteakPrice}}"
+          "Price": "{{BugSteakPrice}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },
         "MadDog.HashtagBearfam_Slime": {
-          "Price": "{{SlimePrice}}"
+          "Price": "{{SlimePrice}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": 5 }, ]
         },
         "MadDog.HashtagBearfam_Batwings": {
-          "Price": "{{BatWingPrice}}"
+          "Price": "{{BatWingPrice}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         }
       }
     }
