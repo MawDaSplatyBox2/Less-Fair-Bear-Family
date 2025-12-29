@@ -14,10 +14,6 @@
             {
               "Modification": "Multiply",
               "Amount": "{{BasementColaPriceMultiplier}}"
-            },
-            {
-              "Modification": "Multiply",
-              "Amount": 0.01
             }
           ]
         },
