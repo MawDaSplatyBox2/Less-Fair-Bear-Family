@@ -67,6 +67,13 @@
         "MadDog.HashtagBearFam_GunnarPerfectPotion": {
           "Price": "{{PerfectPotionSellValue}}",
         },
+        //deluxe potions
+        "MadDog.HashtagBearFam_GunnarPhoenixDown": {
+          "Price": "{{PhoenixNHerbsSellValue}}",
+        },
+        "MadDog.HashtagBearFam_NineHerbsCharm": {
+          "Price": "{{PhoenixNHerbsSellValue}}",
+        },
         //perfect ramen
         "MadDog.HashtagBearFam_GunnarPerfectRamen": {
           "Price": "{{GunnarRamenSellValue}}",
@@ -105,6 +112,16 @@
         //fruit tree sapling
         "MadDog.HashtagBearFam_FerskenPeachSapling": {
           "Price": "{{FersekenPeachSaplingSellValue}}",
+        },
+        //weak rings
+        "MadDog.HashtagBearFam_Regen_WeakRingI": {
+          "Price": "{{WeakRingISellValue}}",
+        },
+        "MadDog.HashtagBearFam_Regen_WeakRingII": {
+          "Price": "{{WeakRingIISellValue}}",
+        },
+        "MadDog.HashtagBearFam_Regen_WeakRingIII": {
+          "Price": "{{WeakRingIIISellValue}}",
         },
       }
     }

@@ -84,15 +84,20 @@
         "MadDog.HashtagBearfam_GunnarPerfectPotion": {
           "Price": "{{PerfectPotionSellValue}}",
           "PriceModifierMode": "Stack",
-          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
+          "PriceModifiers": [ { "Modification": "Add", "Amount": "{{PerfectPotionTax}}" }, { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, ]
         },
-        //deluxe potions
+        //phoenix 'n' herbs deluxe potions
         "MadDog.HashtagBearfam_GunnarPhoenixDown": {
-          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
+          "Price": "{{PhoenixNHerbsPrice}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" }, ]
         },
         "MadDog.HashtagBearfam_NineHerbsCharm": {
-          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
+          "Price": "{{PhoenixNHerbsPrice}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" }, ]
         },
+        //other deluxe potions
         "MadDog.HashtagBearFam_RegenPotions_GreatGospelPotion": {
           "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{DeluxePotionPriceMultiplier}}" } ]
         },
@@ -177,6 +182,19 @@
         //fruit tree sapling
         "MadDog.HashtagBearfam_FerskenPeachSapling": {
           "Price": "{{FersekenPeachSaplingPrice}}",
+        },
+        //weak rings
+        "MadDog.HashtagBearfam_Regen_WeakRingI": {
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{WeakRingPriceMultiplier}}" }, ]
+        },
+        "MadDog.HashtagBearfam_Regen_WeakRingII": {
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{WeakRingPriceMultiplier}}" }, ]
+        },
+        "MadDog.HashtagBearfam_Regen_WeakRingIII": {
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{WeakRingPriceMultiplier}}" }, ]
         },
         //vanilla items
         "MadDog.HashtagBearfam_BugSteak": {

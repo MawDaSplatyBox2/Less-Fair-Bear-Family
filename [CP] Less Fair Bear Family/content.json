@@ -2,34 +2,34 @@
     "Format": "2.0.0",
     "ConfigSchema": {
       "GunnarFairness": {
-        "AllowValues": "Generous, Cheaper, Average, Pricier, Unfair",
-        "Default": "Average",
+        "AllowValues": "Generous, Cheaper, Default, Pricier, Unfair",
+        "Default": "Default",
         "Section": "Global Generosity"
       },
       "YearOneFairness": {
-        "AllowValues": "Generous, Cheaper, Average, Pricier, Unfair",
-        "Default": "Average",
+        "AllowValues": "Generous, Cheaper, Default, Pricier, Unfair",
+        "Default": "Default",
         "Section": "Global Generosity"
       },
       "CachePriceModifier": {
-        "AllowValues": "Generous, Cheaper, Average, Pricier, Unfair",
-        "Default": "Average",
+        "AllowValues": "Generous, Cheaper, Default, Pricier, Unfair",
+        "Default": "Default",
         "Section": "Item-Specific Generosity"
       },
       "DeluxePotionPriceModifier": {
-        "AllowValues": "Generous, Cheaper, Average, Pricier, Unfair",
-        "Default": "Average",
+        "AllowValues": "Generous, Cheaper, Default, Pricier, Unfair",
+        "Default": "Default",
         "Section": "Item-Specific Generosity"
       },
       "FersekenPeachSaplingModifier": {
-        "AllowValues": "Generous, Cheaper, Average, Pricier, Unfair",
-        "Default": "Average",
+        "AllowValues": "Generous, Cheaper, Default, Pricier, Unfair",
+        "Default": "Default",
         "Section": "Item-Specific Generosity"
       },
-      "StoneBrambleBerryEdibility": {
-        "AllowValues": "4, 8, 16, 24, 32, 40, 50",
-        "Default": "16",
-        "Section": "Crops"
+      "WeakRingPriceModifier": {
+        "AllowValues": "Generous, Cheaper, Default, Pricier, Unfair",
+        "Default": "Default",
+        "Section": "Item-Specific Generosity"
       },
       "OriginalColaSellValue": {
         "Default": "25",
@@ -44,15 +44,20 @@
         "Default": "3.0",
         "Section": "Vending Machine"
       },
+      "StoneBrambleBerryEdibility": {
+        "AllowValues": "4, 8, 16, 24, 32, 40, 50",
+        "Default": "16",
+        "Section": "Other"
+      },
       "LuckierRemedyAll": {
         "AllowValues": "true, false",
         "Default": false,
-        "Section": "Bonus"
+        "Section": "Other"
       },
       "OverrideRemedyAllPrice": {
         "AllowValues": "true, false",
         "Default": false,
-        "Section": "Bonus"
+        "Section": "Other"
       },
     },
     "DynamicTokens": [
@@ -66,7 +71,8 @@
       { "Name": "WeirdPotionSellValue", "Value": 250, },
       { "Name": "BadPotionSellValue", "Value": 10, },
       { "Name": "MysteryPotionSellValue", "Value": 650, },
-      { "Name": "PerfectPotionSellValue", "Value": 1500, },
+      { "Name": "PerfectPotionSellValue", "Value": 750, },
+      { "Name": "PerfectPotionTax", "Value": 750, },
       // Perfect ramen
       { "Name": "GunnarRamenSellValue", "Value": 300, },
       { "Name": "GudrunRamenSellValue", "Value": 240, },
@@ -84,6 +90,10 @@
       { "Name": "BugSteakPrice", "Value": 50, },
       { "Name": "SlimePrice", "Value": 5, },
       { "Name": "BatWingPrice", "Value": 15, },
+      // Weak rings
+      { "Name": "WeakRingISellValue", "Value": 500, },
+      { "Name": "WeakRingIISellValue", "Value": 750, },
+      { "Name": "WeakRingIIISellValue", "Value": 1000, },
       // Get the correct fairness value
       { "Name": "Fairness", "Value": "{{GunnarFairness}}",
       },
@@ -144,11 +154,26 @@
       { "Name": "DeluxePotionPriceMultiplier", "Value": 2,
         "When": { "DeluxePotionPriceModifier": "Unfair" }
       },
+      // Weak ring price modification
+      { "Name": "WeakRingPriceMultiplier", "Value": 1.25,
+      },
+      { "Name": "WeakRingPriceMultiplier", "Value": 0.8,
+        "When": { "CachePriceModifier": "Generous" }
+      },
+      { "Name": "WeakRingPriceMultiplier", "Value": 1,
+        "When": { "CachePriceModifier": "Cheaper" }
+      },
+      { "Name": "WeakRingPriceMultiplier", "Value": 1.5,
+        "When": { "CachePriceModifier": "Pricier" }
+      },
+      { "Name": "WeakRingPriceMultiplier", "Value": 2,
+        "When": { "CachePriceModifier": "Unfair" }
+      },
       // Ferseken peach sapling sell value
       { "Name": "FersekenPeachSaplingSellValue", "Value": 1505,
       },
       { "Name": "FersekenPeachSaplingSellValue", "Value": 750,
-        "When": { "DeluxePotionPriceModifier": "Generous" }
+        "When": { "FersekenPeachSaplingModifier": "Generous" }
       },
       // Ferseken peach sapling price
       { "Name": "FersekenPeachSaplingPrice", "Value": 5000,
@@ -164,6 +189,11 @@
       },
       { "Name": "FersekenPeachSaplingPrice", "Value": 9000,
         "When": { "FersekenPeachSaplingModifier": "Unfair" }
+      },
+      // Phoenix 'n' herbs price
+      { "Name": "PhoenixNHerbsSellValue", "Value": 750,
+      },
+      { "Name": "PhoenixNHerbsPrice", "Value": 2000,
       },
       // Remedy All modifier
       { "Name": "RemedyAllPotionPriceMultiplier", "Value": 2.019,
