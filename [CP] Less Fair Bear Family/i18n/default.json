@@ -13,8 +13,6 @@
 	"config.WeakRingPriceModifier.description": "The price of Weak Rings is modified by this setting,\ninstead of Gunnar's Generosity.\nGenerous - ~0.8x prices.\nCheaper - 1x prices.\nDefault - 1.25x prices.\nPricier - 1.5x prices.\nUnfair - 2x prices.\nSet to Cheaper to negate this modifier's effects.",
 	"config.StoneBrambleBerryEdibility.name": "Bramble Berry Edibility",
 	"config.StoneBrambleBerryEdibility.description": "How much energy and health is recovered by eating stone bramble berries. (Energy = 2.5 x edibility; Health = 1.125 x edibility).",
-	"config.PhoenixNHerbsSellValue.name": "Phoenix 'n' Herbs Sell Value",
-	"config.PhoenixNHerbsSellValue.description": "How much Gunnar's Phoenix Down and Nine Herbs sell for.",
 	"config.OriginalColaSellValue.name": "Original Cola Base Price",
 	"config.OriginalColaSellValue.description": "How much it costs to buy original joja cola at the Bear Family's vending machine. This price is also affected by the Basement Cola Price Multiplier. Defaults to 25g to match vanilla sell value.",
 	"config.CustomColaSellValue.name": "Custom Cola Sell Value",

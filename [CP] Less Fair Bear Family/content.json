@@ -158,16 +158,16 @@
       { "Name": "WeakRingPriceMultiplier", "Value": 1.25,
       },
       { "Name": "WeakRingPriceMultiplier", "Value": 0.8,
-        "When": { "CachePriceModifier": "Generous" }
+        "When": { "WeakRingPriceModifier": "Generous" }
       },
       { "Name": "WeakRingPriceMultiplier", "Value": 1,
-        "When": { "CachePriceModifier": "Cheaper" }
+        "When": { "WeakRingPriceModifier": "Cheaper" }
       },
       { "Name": "WeakRingPriceMultiplier", "Value": 1.5,
-        "When": { "CachePriceModifier": "Pricier" }
+        "When": { "WeakRingPriceModifier": "Pricier" }
       },
       { "Name": "WeakRingPriceMultiplier", "Value": 2,
-        "When": { "CachePriceModifier": "Unfair" }
+        "When": { "WeakRingPriceModifier": "Unfair" }
       },
       // Ferseken peach sapling sell value
       { "Name": "FersekenPeachSaplingSellValue", "Value": 1505,
