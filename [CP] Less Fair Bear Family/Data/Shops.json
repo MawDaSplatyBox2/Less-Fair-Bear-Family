@@ -86,7 +86,7 @@
           "PriceModifierMode": "Stack",
           "PriceModifiers": [ { "Modification": "Add", "Amount": "{{PerfectPotionTax}}" }, { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, ]
         },
-        //phoenix 'n' herbs deluxe potions
+        //Phoenix down 'n' nine herbs deluxe potions
         "MadDog.HashtagBearfam_GunnarPhoenixDown": {
           "Price": "{{PhoenixNHerbsPrice}}",
           "PriceModifierMode": "Stack",
@@ -176,6 +176,22 @@
         },
         "MadDog.HashtagBearfam_Recipe_FerskenPeach_Honey": { //Note: this id be wacky
           "Price": "{{FerskenPeachHoneySellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
+        },
+        //booze drink items
+        "MadDog.HashtagBearFam_Zuzu_Mule": {
+          "Price": "{{ZuzuMuleSellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
+        },
+        "MadDog.HashtagBearFam_Honey_OldFashioned": {
+          "Price": "{{OldFashionedHoneySellValue}}",
+          "PriceModifierMode": "Stack",
+          "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
+        },
+        "MadDog.HashtagBearFam_Citrus_City_Gin_Sour": {
+          "Price": "{{CitrusGinSellValue}}",
           "PriceModifierMode": "Stack",
           "PriceModifiers": [ { "Modification": "Multiply", "Amount": "{{FairnessPriceMultiplier}}" }, { "Modification": "Add", "Amount": "{{GenerosityTax}}" }, ]
         },

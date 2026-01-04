@@ -10,7 +10,7 @@
 	"config.FersekenPeachSaplingModifier.name": "Ferseken Peach Sapling Price Modifier",
 	"config.FersekenPeachSaplingModifier.description": "The price of Ferseken Peach Saplings is modified by this setting, instead of Gunnar's Generosity. Set to Generous for a more character-accurate experience.",
 	"config.WeakRingPriceModifier.name": "Weak Ring Price Modifier",
-	"config.WeakRingPriceModifier.description": "The price of Weak Rings is modified by this setting,\ninstead of Gunnar's Generosity.\nGenerous - ~0.8x prices.\nCheaper - 1x prices.\nDefault - 1.25x prices.\nPricier - 1.5x prices.\nUnfair - 2x prices.\nSet to Cheaper to negate this modifier's effects.",
+	"config.WeakRingPriceModifier.description": "The price of Weak Rings is modified by this setting,\ninstead of Gunnar's Generosity.\nGenerous - 0.8x prices.\nCheaper - 1x prices.\nDefault - 1.25x prices.\nPricier - 1.5x prices.\nUnfair - 2x prices.\nSet to Cheaper to negate this modifier's effects.",
 	"config.StoneBrambleBerryEdibility.name": "Bramble Berry Edibility",
 	"config.StoneBrambleBerryEdibility.description": "How much energy and health is recovered by eating stone bramble berries. (Energy = 2.5 x edibility; Health = 1.125 x edibility).",
 	"config.OriginalColaSellValue.name": "Original Cola Base Price",

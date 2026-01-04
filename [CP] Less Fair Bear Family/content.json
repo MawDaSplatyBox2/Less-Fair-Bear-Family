@@ -86,6 +86,10 @@
       { "Name": "WinterBarSellValue", "Value": 75, },
       { "Name": "TriangleGrilledCheeseSellValue", "Value": 50, },
       { "Name": "FerskenPeachHoneySellValue", "Value": 350, },
+      // Booze drinks
+      { "Name": "ZuzuMuleSellValue", "Value": 550, },
+      { "Name": "OldFashionedHoneySellValue", "Value": 780, },
+      { "Name": "CitrusGinSellValue", "Value": 550, },
       // Vanilla items
       { "Name": "BugSteakPrice", "Value": 50, },
       { "Name": "SlimePrice", "Value": 5, },
@@ -95,14 +99,12 @@
       { "Name": "WeakRingIISellValue", "Value": 750, },
       { "Name": "WeakRingIIISellValue", "Value": 1000, },
       // Get the correct fairness value
-      { "Name": "Fairness", "Value": "{{GunnarFairness}}",
-      },
+      { "Name": "Fairness", "Value": "{{GunnarFairness}}", },
       { "Name": "Fairness", "Value": "{{YearOneFairness}}",
         "When": { "Year": "1" }
       },
       // Fairness price multiplier
-      { "Name": "FairnessPriceMultiplier", "Value": 2,
-      },
+      { "Name": "FairnessPriceMultiplier", "Value": 2, },
       { "Name": "FairnessPriceMultiplier", "Value": 1,
         "When": { "Fairness": "Generous" }
       },
@@ -116,8 +118,7 @@
         "When": { "Fairness": "Unfair" }
       },
       // Generosity tax
-      { "Name": "GenerosityTax", "Value": 0,
-      },
+      { "Name": "GenerosityTax", "Value": 0, },
       { "Name": "GenerosityTax", "Value": 10,
         "When": { "Fairness": "Generous" }
       },
@@ -125,8 +126,7 @@
         "When": { "Fairness": "Cheaper" }
       },
       // Cache price modification
-      { "Name": "CachePriceMultiplier", "Value": 1.25,
-      },
+      { "Name": "CachePriceMultiplier", "Value": 1.25, },
       { "Name": "CachePriceMultiplier", "Value": 0.8,
         "When": { "CachePriceModifier": "Generous" }
       },
@@ -140,8 +140,7 @@
         "When": { "CachePriceModifier": "Unfair" }
       },
       // Deluxe potion price modification
-      { "Name": "DeluxePotionPriceMultiplier", "Value": 1,
-      },
+      { "Name": "DeluxePotionPriceMultiplier", "Value": 1, },
       { "Name": "DeluxePotionPriceMultiplier", "Value": 0.5,
         "When": { "DeluxePotionPriceModifier": "Generous" }
       },
@@ -155,8 +154,7 @@
         "When": { "DeluxePotionPriceModifier": "Unfair" }
       },
       // Weak ring price modification
-      { "Name": "WeakRingPriceMultiplier", "Value": 1.25,
-      },
+      { "Name": "WeakRingPriceMultiplier", "Value": 1.25, },
       { "Name": "WeakRingPriceMultiplier", "Value": 0.8,
         "When": { "WeakRingPriceModifier": "Generous" }
       },
@@ -170,14 +168,12 @@
         "When": { "WeakRingPriceModifier": "Unfair" }
       },
       // Ferseken peach sapling sell value
-      { "Name": "FersekenPeachSaplingSellValue", "Value": 1505,
-      },
+      { "Name": "FersekenPeachSaplingSellValue", "Value": 1505, },
       { "Name": "FersekenPeachSaplingSellValue", "Value": 750,
         "When": { "FersekenPeachSaplingModifier": "Generous" }
       },
       // Ferseken peach sapling price
-      { "Name": "FersekenPeachSaplingPrice", "Value": 5000,
-      },
+      { "Name": "FersekenPeachSaplingPrice", "Value": 5000, },
       { "Name": "FersekenPeachSaplingPrice", "Value": 1600,
         "When": { "FersekenPeachSaplingModifier": "Generous" }
       },
@@ -190,19 +186,17 @@
       { "Name": "FersekenPeachSaplingPrice", "Value": 9000,
         "When": { "FersekenPeachSaplingModifier": "Unfair" }
       },
-      // Phoenix 'n' herbs price
+      // Phoenix down 'n' nine herbs price
       { "Name": "PhoenixNHerbsSellValue", "Value": 750,
       },
       { "Name": "PhoenixNHerbsPrice", "Value": 2000,
       },
       // Remedy All modifier
-      { "Name": "RemedyAllPotionPriceMultiplier", "Value": 2.019,
-      },
+      { "Name": "RemedyAllPotionPriceMultiplier", "Value": 2.019, },
       { "Name": "RemedyAllPotionPriceMultiplier", "Value": "{{FairnessPriceMultiplier}}",
         "When": { "OverrideRemedyAllPrice": false }
       },
-      { "Name": "RemedyAllPotionPriceFactor", "Value": 5,
-      },
+      { "Name": "RemedyAllPotionPriceFactor", "Value": 5, },
     ],
     "Changes": [
       {

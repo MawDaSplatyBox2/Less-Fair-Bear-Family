@@ -109,6 +109,16 @@
         "MadDog.HashtagBearFam_FerskenPeach_Honey": {
           "Price": "{{FerskenPeachHoneySellValue}}",
         },
+        //booze items
+        "MadDog.HashtagBearFam_Zuzu_Mule": {
+          "Price": "{{ZuzuMuleSellValue}}",
+        },
+        "MadDog.HashtagBearFam_Honey_OldFashioned": {
+          "Price": "{{OldFashionedHoneySellValue}}",
+        },
+        "MadDog.HashtagBearFam_Citrus_City_Gin_Sour": {
+          "Price": "{{CitrusGinSellValue}}",
+        },
         //fruit tree sapling
         "MadDog.HashtagBearFam_FerskenPeachSapling": {
           "Price": "{{FersekenPeachSaplingSellValue}}",
